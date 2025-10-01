@@ -12,13 +12,7 @@ Este projeto é um sistema de gerenciamento de uma oficina automotiva de ar cond
 
 ## 📦 Instalação e Execução
 
-### 1. Clonar o projeto
-```bash
-git clone <link_do_repositorio>
-cd junior_auto_ar
-```
-
-### 2. Criar ambiente virtual
+### 1. Criar ambiente virtual
 Windows:
 ```bash
 python -m venv venv
@@ -31,17 +25,17 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 3. Instalar dependências
+### 2. Instalar dependências
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Inicializar banco de dados (apenas se não existir)
+### 3. Inicializar banco de dados (apenas se não existir)
 ```bash
 python init_db.py
 ```
 
-### 5. Rodar servidor
+### 4. Rodar servidor
 ```bash
 flask run
 ```
