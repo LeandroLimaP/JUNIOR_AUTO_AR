@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron bg-light p-5 rounded">
+    <h1 class="display-4">JUNIOR AUTO AR</h1>
+    <p class="lead">Especialistas em climatização automotiva. Garantindo o seu conforto e o clima ideal para o seu carro desde 1997</p>
+    <hr class="my-4">
+    <p></p>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-users me-2"></i> Clientes
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Gestão de Clientes</h5>
+                <p class="card-text">Cadastre e gerencie informações dos seus clientes.</p>
+                <a href="{{ url_for('clients') }}" class="btn btn-primary">Ver Clientes</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-car me-2"></i> Veículos
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Gestão de Veículos</h5>
+                <p class="card-text">Registre e acompanhe os veículos dos seus clientes.</p>
+                <a href="{{ url_for('vehicles') }}" class="btn btn-primary">Ver Veículos</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-tools me-2"></i> Serviços
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Gestão de Serviços</h5>
+                <p class="card-text">Registre e acompanhe os serviços realizados.</p>
+                <a href="{{ url_for('services') }}" class="btn btn-primary">Ver Serviços</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-cogs me-2"></i> Peças
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Gestão de Peças</h5>
+                <p class="card-text">Controle o estoque e preços das peças utilizadas.</p>
+                <a href="{{ url_for('parts') }}" class="btn btn-primary">Ver Peças</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5">
+    <h2></h2>
+    <p></p>
+    <p></p>
+</div>
+{% endblock %}

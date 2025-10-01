@@ -1,0 +1,152 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilos da barra de navegação */
+.navbar {
+    background-color: #155294;
+    padding: 1rem 0;
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #e9ecef !important;
+}
+
+/* Estilos dos cards */
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+}
+
+.card-header {
+    background-color: #155294;
+    color: #ffffff;
+    border-radius: 8px 8px 0 0 !important;
+    padding: 15px 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Estilos dos botões */
+.btn-primary {
+    background-color: #2caa13;
+    border-color: #0af00a;
+}
+
+.btn-primary:hover {
+    background-color: #298a16;
+    border-color: #0AF00A;
+}
+
+.btn-danger {
+    background-color: #eb0404;
+    border-color: #f10a21;
+}
+
+.btn-danger:hover {
+    background-color: #bd1a2a;
+    border-color: #e21126;
+}
+
+.btn-info {
+    background-color: #0c72b6;
+    border-color: #0e8eb4;
+    color: #ffffff;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+/* Estilos das tabelas */
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    border-bottom: 2px solid #dee2e6;
+    background-color: #e9ecef;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Estilos dos formulários */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+label {
+    font-weight: bold;
+    color: #495057;
+}
+
+/* Estilos do rodapé */
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Estilos para alertas e mensagens */
+.alert {
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .card-header .btn {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Serviços - JUNIOR AUTO AR{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <span>Lista de Serviços</span>
+        <a href="{{ url_for('new_service') }}" class="btn btn-info btn-sm">
+            <i class="fas fa-plus-circle me-1"></i> Adicionar Novo Serviço
+        </a>
+    </div>
+    <div class="card-body">
+        {% if services %}
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descrição</th>
+                        <th>Custo</th>
+                        <th>Data do Serviço</th>
+                        <th>Veículo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for service in services %}
+                    <tr>
+                        <td>{{ service.id }}</td>
+                        <td>{{ service.description }}</td>
+                        <td>R$ {{ service.cost }}</td>
+                        <td>{{ service.date.strftime('%d/%m/%Y') }}</td>
+                        <td>{{ service.vehicle.license_plate if service.vehicle else "N/A" }}</td>
+                        <td>
+                            <a href="{{ url_for('edit_service', service_id=service.id) }}" class="btn btn-primary btn-sm">
+                                <i class="fas fa-edit"></i> Editar
+                            </a>
+                            <form action="{{ url_for('delete_service', service_id=service.id) }}" method="POST" style="display:inline;">
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir este serviço?');">
+                                    <i class="fas fa-trash-alt"></i> Excluir
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p class="text-center">Nenhum serviço registrado ainda.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
